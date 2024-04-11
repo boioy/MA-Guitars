@@ -1,3 +1,4 @@
+/*
 const progressBar = document.querySelector('.progress-bar');
 
 //event listen for scroll
@@ -20,7 +21,7 @@ scrollHeight: 1048
 Unten:
 scrollTop: 679
 scrollHeight: 1048
-*/
+
 
 window.onscroll = () => {
     shrinkHeader();
@@ -34,3 +35,4 @@ function shrinkHeader(){
         header.style.setProperty('height', '30vh');
     }
 }
+*/
