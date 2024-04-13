@@ -4,9 +4,16 @@
     padding: 0;
     overflow-x: hidden;
 }
+
+/* ------------------- CUSTOM PROPERTIES -------------------*/
+:root{
+    --header-size: 20rem;
+    --font-color: white;
+    --transparent-background: rgba(255, 255, 255, 0.3);
+}
 body{
-    background-color: rgb(36, 36, 36);
-    font-size: 3em;
+    background-color: rgb(32, 32, 32);
+    color: var(--font-color);
 }
 
 .progress-bar{
@@ -18,26 +25,137 @@ body{
     z-index: 1000;
 }
 
-.header{
+a{
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+/* --- Desktop Header --- */
+
+.desktop-header{
     position: fixed;
     top: 0;
     display: flex;
-    height: 30vh;
+    height: var(--header-size);
     width: 100vw;
-    background-color: teal;
-    justify-content: space-between;
+    background-color: rgba(20, 20, 20, 0);
+    justify-content: space-around;
     align-items: center;
     transition: 0.2s;
 }
 
+.logo{
+    height: calc(var(--header-size) - 1rem);
+}
+
 .nav-list{
+    --nav-font-color: rgb(0, 0, 0);
     display: flex;
     list-style: none;
-    gap: 20px;
+    gap: 2ch;
     margin-right: 3rem;
+    font-size: 2rem;
+    background-color: var(--transparent-background);
+    padding: 0.4rem 1rem;
+}
+.nav-list a{
+    color: var(--nav-font-color);
+}
+.nav-list a:hover{
+    color: var(--font-color);
+}
+.nav-list a:active{
+    color: var(--font-color);
+}
+.nav-list span{
+    font-size: 0.7em;
+}
+
+/* --- Header Section --- */
+
+.guitar-header{
+    height: 80vh;
+    background-image: url(images/guitar-background-2-flipped.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 section{
-    height: 100dvh;
-    background-color: brown;
+    display: flex;
+    margin: 5rem 10rem 0;
+}
+/* --- First Section --- */
+
+.first-section{
+    gap: 5rem;
+    justify-content: space-around;
+}
+.manuel-pic-container{
+    width: 30rem;
+}
+.manuel-pic{
+    width: 100%;
+    height: 85%;
+    object-fit: cover;
+    object-position: top;
+}
+
+h1{
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+p{
+    font-size: 2.5rem;
+}
+
+.section_1-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+.section_1-links-container{
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+}
+.section_1-links{
+    position: relative;
+    width: 20rem;
+    height: 25rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guitars-link{
+    background-image: url(images/guitar-head.png);
+    --font-color: white;
+}
+.workshop-link{
+    background-image: url(images/workshop-pic.png);
+    --font-color: black;
+}
+.section_1-links a{
+    font-size: 2rem;
+    padding: 0 1ch;
+    position: absolute;
+    color: var(--font-color);
+    border: 0.15rem solid var(--font-color);
+    background-color: var(--transparent-background);
+}
+.guitars-link a{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.guitars-link a:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    --font-color: black;
+}
+.workshop-link a:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    --font-color: white;
 }
