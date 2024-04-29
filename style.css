@@ -16,9 +16,9 @@
     --transparent-background: rgba(255, 255, 255, 0.3);
     --transparent-nav: rgba(255, 255, 255, 0.3);
     --outer-margin: 17rem;
-    --font-size-h1: 4rem;
+    --font-size-h1: 3.3rem;
     --font-size-h2: 2.5rem;
-    --font-size-text: 2rem;
+    --font-size-text: 1.8rem;
 }
 body{
     background-color: rgb(32, 32, 32);
@@ -150,8 +150,8 @@ section, footer{
     justify-content: flex-start;
 }
 .manuel-pic-container{
-    width: 30rem;
-    height: 50rem;
+    width: 26rem;
+    height: 45rem;
     overflow: hidden;
 }
 .manuel-pic{

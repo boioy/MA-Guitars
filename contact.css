@@ -1,6 +1,9 @@
 .contact-text-container{
     width: 70rem;
 }
+.contact-text-container p{
+    text-align: justify;
+}
 
 .contact-form-container span{
     color: firebrick;
